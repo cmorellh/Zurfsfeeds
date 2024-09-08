@@ -1,6 +1,9 @@
-Pre-requirements:
+# ZurfsFeeds
 
-Check your node version:
+## Pre-requirements:
+
+- **Check your node version**:
+~~~bash
 node -v
 https://nodejs.org/en/download/package-manager
 
