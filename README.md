@@ -17,5 +17,6 @@ npm run start-proxy
 
 Application: 
 cd zurfsfeeds/
+cd surf_realtime/
 npm install
 npm run dev
