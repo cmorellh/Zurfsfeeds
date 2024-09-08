@@ -2,8 +2,8 @@
 
 ## Pre-requirements:
 
-- **Check your node version**:
 ~~~bash
+Check your node version:
 node -v
 https://nodejs.org/en/download/package-manager
 
