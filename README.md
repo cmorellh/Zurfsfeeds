@@ -1,11 +1,12 @@
 Pre-requirements:
 
-Check your node / npm version:
-https://nodejs.org/en/download/package-manager
-https://docs.npmjs.com/cli/v10/commands/npm-start
-
+Check your node version:
 node -v
+https://nodejs.org/en/download/package-manager
+
+Check your npm version:
 npm -v
+https://docs.npmjs.com/cli/v10/commands/npm-start
 
 cd zurfsfeeds/
 npm install
