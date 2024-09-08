@@ -1,0 +1,74 @@
+.main_container {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Adjusting the size of the legend and feed columns */
+    gap: 20px; /* Adds some space between columns */
+}
+
+.feed-container {
+    max-height: 500px; /* Limit the height of the feed container */
+    overflow-y: auto; /* Add scrolling if the content exceeds max height */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  .feed-title {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .messages-container {
+    margin-top: 20px;
+  }
+  
+  .messages-header {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .el_ul_styling {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .el_li_style {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color:black;
+    font-size: 12px;
+  }
+  
+  .legend-container {
+    /* position: absolute; */
+    /* top: 10px; */
+    /* left: 5px; */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    max-height: 15rem;
+    margin-top: 8rem;
+  }
+  
+  .legend-container h4 {
+    margin-top: 0;
+    color:black;
+  }
+  
+  .legend-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .legend-container li {
+    margin: 5px 0;
+    color: black;
+
+  }
+  
