@@ -4,16 +4,22 @@
     gap: 20px; /* Adds some space between columns */
 }
 
+@media screen and (max-width: 768px) {
+  .main_container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
 .feed-container {
     max-height: 500px; /* Limit the height of the feed container */
     overflow-y: auto; /* Add scrolling if the content exceeds max height */
-    padding: 20px;
+    padding: 10px;
     font-family: Arial, sans-serif;
     position: relative;
   }
   
   .feed-title {
-    font-size: 24px;
+    font-size: 35spx;
     color: white;
   }
   
@@ -52,7 +58,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     max-height: 15rem;
-    margin-top: 8rem;
+    margin-top: 2rem;
   }
   
   .legend-container h4 {
