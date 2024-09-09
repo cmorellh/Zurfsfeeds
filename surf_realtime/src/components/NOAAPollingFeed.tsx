@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import './RestAxios.css';
+import './NOAAPollingFeed.css';
 
 export const NOAAPollingFeed = () => {
   const [parsedData, setParsedData] = useState([]);
@@ -38,33 +38,36 @@ export const NOAAPollingFeed = () => {
   };
 
   return (
-    <div className='main_container'>
-      <div className="legend-container">
-        <h4>Legend</h4>
-        <ul>
-          <li><strong>SwH:</strong> Swell Height</li>
-          <li><strong>WWD:</strong> Wind-Wave Direction</li>
-          <li><strong>SwP:</strong> Swell Period</li>
-          <li><strong>WWH:</strong> Wind-Wave Height</li>
-          <li><strong>STP:</strong> Steepness (VERY STEEP, STEEP, AVERAGE, or SWELL)</li>
-        </ul>
-      </div>
-      <div className="feed-container">
-        <h1 className="feed-title">NOAA Real-Time Feed</h1>
-        <div className="messages-container">
-          <ul className="el_ul_styling">
-            {parsedData.slice(0, 10).map((row, index) => (
-              <li className="el_li_style" key={index}>
-                {Object.entries(row).map(([key, value], idx) => (
-                  <span key={idx}>
-                    <strong>{key}:</strong> {value}{' '}
-                  </span>
-                ))}
-              </li>
-            ))}
+    <div>
+      <h1 className="feed-title">NOAA Real-Time Feed</h1>
+      <div className='main_container'>
+        <div className="legend-container">
+          <h4>Legend</h4>
+          <ul>
+            <li><strong>SwH:</strong> Swell Height</li>
+            <li><strong>WWD:</strong> Wind-Wave Direction</li>
+            <li><strong>SwP:</strong> Swell Period</li>
+            <li><strong>WWH:</strong> Wind-Wave Height</li>
+            <li><strong>STP:</strong> Steepness (VERY STEEP, STEEP, AVERAGE, or SWELL)</li>
           </ul>
+        </div>
+        <div className="feed-container">
+          <div className="messages-container">
+            <ul className="el_ul_styling">
+              {parsedData.slice(0, 10).map((row, index) => (
+                <li className="el_li_style" key={index}>
+                  {Object.entries(row).map(([key, value], idx) => (
+                    <span key={idx}>
+                      <strong>{key}:</strong> {value}{' '}
+                    </span>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+
   );
 }

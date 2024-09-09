@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import './RestAxios.css'; // Importing the custom CSS
+import './CaricoosAPI.css'; // Importing the custom CSS
 
 export const CaricoolsPollingWaves = () => {
   const [parsedData, setParsedData] = useState({});
@@ -35,28 +35,30 @@ export const CaricoolsPollingWaves = () => {
   };
 
   return (
-    <div className='main_container'>
-      <div className="legend-container">
-        <h4>Legend</h4>
-        <ul>
-          <li><strong>FT:</strong> Significant Wave Height (ft)</li>
-          <li><strong>SWD:</strong> Mean Wave Direction (degrees)</li>
-        </ul>
-      </div>
-      <div className="feed-container">
-        <h1 className="fetmux ed-title">Caricoos API - Latest Waves</h1>
-        <div className="messages-container">
-          {/* <h3 className="messages-header">Parsed Data:</h3> */}
-          <ul className="el_ul_styling">
-            <li className="el_li_style">
-              <strong>FT:</strong> {parsedData.FT} ft
-            </li>
-            <li className="el_li_style">
-              <strong>SWD:</strong> {parsedData.SWD} degrees
-            </li>
+    <div>
+      <h1 className="feed-title">Caricoos API - Latest Waves</h1>
+      <div className='main_container'>
+        <div className="legend-container">
+          <h4>Legend</h4>
+          <ul>
+            <li><strong>FT:</strong> Significant Wave Height (ft)</li>
+            <li><strong>SWD:</strong> Mean Wave Direction (degrees)</li>
           </ul>
+        </div>
+        <div className="feed-container">
+          <div className="messages-container">
+            <ul className="el_ul_styling">
+              <li className="el_li_style">
+                <strong>FT:</strong> {parsedData.FT} ft
+              </li>
+              <li className="el_li_style">
+                <strong>SWD:</strong> {parsedData.SWD} degrees
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+
   );
 };
